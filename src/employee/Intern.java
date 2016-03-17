@@ -1,6 +1,7 @@
 package employee;
 
-import static employee.TestEmployee.ml;
+//import static employee.TestEmployee.ml;
+import java.util.List;
 
 public class Intern  extends Employee {
 
@@ -8,7 +9,7 @@ public class Intern  extends Employee {
         super(firstName, lastName, age);
     }    
     
-        public void addIntern(Intern i){
+        public void addIntern(Intern i,List<Employee> ml){
             
             for(int j=0;j<ml.size();j++){
 //                    if((e.firstName==ml.get(i).firstName) && (e.lastName==ml.get(i).lastName) && (e.age==ml.get(i).age) )

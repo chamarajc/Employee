@@ -1,6 +1,9 @@
 package employee;
 
-import static employee.TestEmployee.ml;
+//import static employee.TestEmployee.ml;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 //import java.util.Objects;
 
 public class Employee {
@@ -13,7 +16,7 @@ public class Employee {
         this.lastName=lastName;
         this.age=age; } 
     
-        public void addEmployee(Employee e){            
+        public void addEmployee(Employee e,List<Employee> ml){            
            // boolean check = ml.contains(e);
             //int i;
             //boolean b;
@@ -34,10 +37,11 @@ public class Employee {
             for(int i=0;i<ml.size();i++){
 //                    if((e.firstName==ml.get(i).firstName) && (e.lastName==ml.get(i).lastName) && (e.age==ml.get(i).age) )
                 if((e.firstName.equals(ml.get(i).firstName)) && (e.lastName.equals(ml.get(i).lastName)) && (e.age==ml.get(i).age) )
-                    b = true;
+                    {b = true;
+                    break;}
                 else                        
                     b = false;                
-                System.out.println(b);                    
+                //System.out.println(b);                    
             }                       
                          
             if(b == true)                
@@ -47,10 +51,10 @@ public class Employee {
                 ml.add(new Employee(firstName,lastName,age));
                         System.out.println("Employee "+firstName+" "+lastName+" of "+age+" years added to database");}
             
-            System.out.println(b);           
+            //System.out.println(b);           
     }
  
-/*    @Override
+ /* @Override
     public boolean equals(Object o){
 //            int i=0;
             boolean a=true;
@@ -64,12 +68,9 @@ public class Employee {
                        {a=true;}
                     else{a=false;}}
                  return a;  
-    }   
-    public void sortByname(){
+    }   */
         
-    }
-    
-    @Override
+    /*@Override
     public int hashCode() {
         int hash = 7;
         hash = 61 * hash + Objects.hashCode(this.firstName);
