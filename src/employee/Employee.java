@@ -30,13 +30,15 @@ public class Employee {
                 ml.add(new Employee(firstName,lastName,age));
                 System.out.println("Employee "+firstName+" "+lastName+" of "+age+" years added to database");
                 break;}}*/
-            boolean b=false;
+            boolean b=true;
             for(int i=0;i<ml.size();i++){
 //                    if((e.firstName==ml.get(i).firstName) && (e.lastName==ml.get(i).lastName) && (e.age==ml.get(i).age) )
-                    if((e.firstName.equals(ml.get(i).firstName)) && (e.lastName.equals(ml.get(i).lastName)) && (e.age==ml.get(i).age) )
-                        b = true;
-                    else                        
-                        b = false; }                       
+                if((e.firstName.equals(ml.get(i).firstName)) && (e.lastName.equals(ml.get(i).lastName)) && (e.age==ml.get(i).age) )
+                    b = true;
+                else                        
+                    b = false;                
+                System.out.println(b);                    
+            }                       
                          
             if(b == true)                
                 {System.out.println("Already Exists.Please Enter Different Values");
@@ -45,14 +47,7 @@ public class Employee {
                 ml.add(new Employee(firstName,lastName,age));
                         System.out.println("Employee "+firstName+" "+lastName+" of "+age+" years added to database");}
             
-            System.out.println(b);
-            
-            int ls = ml.size()-1;
-                System.out.println(ls);
-            
-//            for (int i: ls) {
-//                System.out.println(i);
-//            }
+            System.out.println(b);           
     }
  
 /*    @Override
