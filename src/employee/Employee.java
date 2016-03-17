@@ -30,20 +30,29 @@ public class Employee {
                 ml.add(new Employee(firstName,lastName,age));
                 System.out.println("Employee "+firstName+" "+lastName+" of "+age+" years added to database");
                 break;}}*/
-            boolean b;
+            boolean b=false;
             for(int i=0;i<ml.size();i++){
 //                    if((e.firstName==ml.get(i).firstName) && (e.lastName==ml.get(i).lastName) && (e.age==ml.get(i).age) )
                     if((e.firstName.equals(ml.get(i).firstName)) && (e.lastName.equals(ml.get(i).lastName)) && (e.age==ml.get(i).age) )
-                        b=true;
+                        b = true;
                     else                        
-                        b=false;                        
-                        } 
+                        b = false; }                       
+                         
             if(b == true)                
                 {System.out.println("Already Exists.Please Enter Different Values");
                         }
             else{
                 ml.add(new Employee(firstName,lastName,age));
                         System.out.println("Employee "+firstName+" "+lastName+" of "+age+" years added to database");}
+            
+            System.out.println(b);
+            
+            int ls = ml.size()-1;
+                System.out.println(ls);
+            
+//            for (int i: ls) {
+//                System.out.println(i);
+//            }
     }
  
 /*    @Override
