@@ -82,7 +82,8 @@ public class TestEmployee {
                         else{
                             System.out.println(ml.get(i2).firstName+" "+ml.get(i2).lastName+" of age "+ml.get(i2).age+" is not an Intern");
                             break;
-                        }}
+                        }
+                    break;}
 
                 case 'n':  
                     {   Collections.sort(nameList);
