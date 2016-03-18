@@ -103,23 +103,21 @@ public class TestEmployee {
 //                                        
 //                            }}
                     for (int number : array) {                        
-                        System.out.println(number +" years");} 
+                        //System.out.println(number +" years");
+                    } 
                     int size = ml.size();
-                       System.out.println("size = "+size);
-                    //sortByAge(size,array);
-                    System.out.println(ml.get(size-1).firstName+" "+ml.get(size-1).lastName+" "+ml.get(size-1).age);
-                    
-                    for(int p=5;p<0;p--)
-                    {System.out.println("fff");}
-                    
-                    for (int i=5;i<0;i--){
-                        for(int j=5;j<0;j--){
+                   
+                    for (int i=5;i>0;i--){
+                        for(int j=5;j>0;j--){
                             if(size==0)                                
                                 System.out.println(ml.get(size).firstName+ml.get(size).lastName+ml.get(size).age);
                             else if (array[size-i]==ml.get(size-j).age)
                                 System.out.println(ml.get(size-j).firstName+ml.get(size-j).lastName+ml.get(size-j).age);
-                            else
-                                System.out.println(size); }}
+                                //ml.remove(size-j);
+                                //size=ml.size();
+//                            else
+//                                System.out.println(size); 
+                        }}
 //                        else    
 //                            { ml.remove(size-i);
 //                            size=ml.size();                            
