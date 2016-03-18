@@ -1,8 +1,7 @@
 package employee;
 
-//import static employee.TestEmployee.ml;
-import java.util.Collections;
-import java.util.LinkedList;
+//import java.util.Collections;
+//import java.util.LinkedList;
 import java.util.List;
 //import java.util.Objects;
 
@@ -17,31 +16,14 @@ public class Employee {
         this.age=age; } 
     
         public void addEmployee(Employee e,List<Employee> ml){            
-           // boolean check = ml.contains(e);
-            //int i;
-            //boolean b;
-            /*boolean check ;//= ml.get(i).equals(e);
-            for(int i=0;i<ml.size();i++){
-                
-                check = ml.get(i).equals(e);
-            
-            if (check == true){
-//            if (ml.equals(e)){
-                System.out.println("Already Exists.Please Enter Different Values");
-                break;} 
-            else {
-                ml.add(new Employee(firstName,lastName,age));
-                System.out.println("Employee "+firstName+" "+lastName+" of "+age+" years added to database");
-                break;}}*/
+
             boolean b=true;
             for(int i=0;i<ml.size();i++){
-//                    if((e.firstName==ml.get(i).firstName) && (e.lastName==ml.get(i).lastName) && (e.age==ml.get(i).age) )
                 if((e.firstName.equals(ml.get(i).firstName)) && (e.lastName.equals(ml.get(i).lastName)) && (e.age==ml.get(i).age) )
                     {b = true;
                     break;}
                 else                        
                     b = false;                
-                //System.out.println(b);                    
             }                       
                          
             if(b == true)                
@@ -51,7 +33,6 @@ public class Employee {
                 ml.add(new Employee(firstName,lastName,age));
                         System.out.println("Employee "+firstName+" "+lastName+" of "+age+" years added to database");}
             
-            //System.out.println(b);           
     }
  
  /* @Override

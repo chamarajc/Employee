@@ -2,14 +2,9 @@ package employee;
 
 import java.util.*;
 import java.util.Arrays;
-//import org.apache.commons.lang.ArrayUtils;
-import employee.Employee;
 
 
 public class TestEmployee {
-    
-    
-   // static List<Employee> ml = new LinkedList<>();
 
     public static void main(String[] args) {
         
@@ -50,9 +45,11 @@ public class TestEmployee {
                 + "\"g\" to get details \n \"n\" to sort by name or \n "
                 + "\"a\" to sort by age: ");
         String s = sc.nextLine();
-        char c = s.charAt(0);     
+        char c = s.charAt(0); 
+        
+        switch (c){
             
-            if(c == 'e')                    
+            case 'e':                    
                 {System.out.println("Enter First Name:");
                 String fn=sc.nextLine();
                 System.out.println("Enter Last Name:");
@@ -61,10 +58,10 @@ public class TestEmployee {
                 int a=sc.nextInt();
 
                 Employee e = new Employee(fn,ln,a);                
-                e.addEmployee(e,ml);}                
+                e.addEmployee(e,ml);
+                break;}                
 
-            else 
-                if(c == 'i')                    
+            case 'i':                    
                     {System.out.println("Enter First Name:");
                     String fn=sc.nextLine();
                     System.out.println("Enter Last Name:");
@@ -73,10 +70,10 @@ public class TestEmployee {
                     int a=sc.nextInt();
 
                     Intern i = new Intern(fn,ln,a);
-                    i.addIntern(i,ml);}                      
+                    i.addIntern(i,ml);
+                    break;}                      
 
-                else
-                    if(c == 'g')
+                case 'g':
                     {System.out.print("Enter the employee index:");
                      int i2 = sc.nextInt();                
                      boolean b = ml.get(i2) instanceof Intern;
@@ -84,16 +81,16 @@ public class TestEmployee {
                             System.out.println(ml.get(i2).firstName+" "+ml.get(i2).lastName+" of age "+ml.get(i2).age+" is an Intern");}
                         else{
                             System.out.println(ml.get(i2).firstName+" "+ml.get(i2).lastName+" of age "+ml.get(i2).age+" is not an Intern");
+                            break;
                         }}
 
-                else
-                    if(c == 'n')   
+                case 'n':  
                     {   Collections.sort(nameList);
-                        System.out.println(nameList);}
+                        System.out.println(nameList);
+                    break;}
 
-                else
-                    if(c == 'a')   
-                   {Arrays.sort(array); 
+                case 'a':  
+                   Arrays.sort(array); 
                    //Collections.sort(nameList);
 //                    for (int number : array) {                        
 //                        //System.out.println(nameList.get() + number +" years");
@@ -110,24 +107,31 @@ public class TestEmployee {
                     int size = ml.size();
                        System.out.println("size = "+size);
                     //sortByAge(size,array);
-                   {System.out.println(ml.get(size-1).firstName+" "+ml.get(size-1).lastName+" "+ml.get(size-1).age);}
-
+                    System.out.println(ml.get(size-1).firstName+" "+ml.get(size-1).lastName+" "+ml.get(size-1).age);
+                    
+                    for(int p=5;p<0;p--)
+                    {System.out.println("fff");}
+                    
                     for (int i=5;i<0;i--){
                         for(int j=5;j<0;j--){
-                            if(size==0)
-                                System.out.println("fu");
-                              //  {System.out.println(ml.get(size).firstName+ml.get(size).lastName+ml.get(size).age);}
+                            if(size==0)                                
+                                System.out.println(ml.get(size).firstName+ml.get(size).lastName+ml.get(size).age);
                             else if (array[size-i]==ml.get(size-j).age)
-                                {System.out.println(ml.get(size-j).firstName+ml.get(size-j).lastName+ml.get(size-j).age);}}}
+                                System.out.println(ml.get(size-j).firstName+ml.get(size-j).lastName+ml.get(size-j).age);
+                            else
+                                System.out.println(size); }}
 //                        else    
 //                            { ml.remove(size-i);
 //                            size=ml.size();                            
 //                            array = ArrayUtils.removeElement(array, array[size-i]);}
                            // sortByAge(size,array);
-                   }    
+                          //System.out.println(size); 
+                    break;
+                    
 
-            else
-                System.out.println("Please enter a valid character");
+                default:
+                    System.out.println("Please enter a valid character");
+                    break;}
             
 //        ml.clear();       
 
